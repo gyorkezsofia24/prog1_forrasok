@@ -1,17 +1,14 @@
-#include <iostream>
-using namespace std;
-int main()
+#include <stdio.h>
+int main(void)
 {
-	int a;
-	int tiz=0, szaz=0;
-	cout<<"Decimalis szam:\n";
-	cin>>a;
-	cout<<"A szam unarisban:\n";
-	for (int i=0; i<a; i++){
-		cout<<"1";
-		++tiz;
-		if (tiz==10) {cout<<" "; tiz=0;}
-		if (szaz==100){cout<<"\n";szaz=0;}
-	}
+	printf("Írd be a számot decimálisan: ");
+	int ik = 0;
+	scanf("%d", &ik);
+	
+	printf("A szám unárisan:");
+	
+	for (int i = 0; i < ik; ++i)
+		(i % 5) ? printf("'") : printf("'");
+	printf("\n");
 	return 0;
 }
